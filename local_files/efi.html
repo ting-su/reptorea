@@ -212,44 +212,81 @@
       color: var(--text-sub);
     }
 
-    .founder-quote {
-      font-size: 1.2rem;
-      font-style: italic;
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 2rem;
-      color: var(--text-strong);
-    }
-
-    .founder-caption {
-      text-align: center;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      border-top: 1px solid var(--text-strong);
-      display: inline-block;
-      padding-top: 0.7rem;
-      color: var(--text-strong);
-    }
-
-    .founders-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3.5rem;
-      max-width: 900px;
+    .founders-wrap {
+      max-width: 860px;
       margin: 0 auto;
-    }
-
-    .founder-block {
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 0;
+    }
+
+    .founder-block {
+      width: 100%;
+      text-align: center;
+      padding: 3rem 2rem;
+      position: relative;
+    }
+
+    .founder-block + .founder-block::before {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: var(--accent);
+      margin: 0 auto 3rem;
+      opacity: 0.6;
+    }
+
+    .founder-mark {
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--accent);
+      opacity: 0.35;
+      font-family: Georgia, serif;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .founder-quote {
+      font-size: 1.15rem;
+      font-style: italic;
+      line-height: 1.85;
+      color: var(--text-strong);
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+
+    .founder-caption {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--accent);
+      display: inline-block;
+    }
+
+    .founder-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--text-strong);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .founder-title {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent);
     }
 
     @media (max-width: 768px) {
-      .founders-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+      .founder-block {
+        padding: 2rem 0.5rem;
       }
     }
 
@@ -459,34 +496,37 @@
     </div>
   </section>
 
-  <section id=”founder”>
+  <section id=”founder” style=”background: var(--bg-alt);”>
     <div class=”container”>
       <div class=”section-header”>
         <div class=”section-subtitle”>From the Co-Founders</div>
       </div>
-      <div class=”founders-grid”>
+      <div class=”founders-wrap”>
+
         <div class=”founder-block”>
+          <span class=”founder-mark”>&ldquo;</span>
           <p class=”founder-quote”>
-            “I founded EFI with a simple conviction: the future of AI will be shaped by the quality of our
+            I founded EFI with a simple conviction: the future of AI will be shaped by the quality of our
             attention, courage, and care. When we invest in inner strength and shared wisdom, powerful tools
-            can help us build societies that are more humane, more just, and more awake.”
+            can help us build societies that are more humane, more just, and more awake.
           </p>
-          <span class=”founder-caption”>
-            Alice Yihan Wang · Co-Founder, EFI
-          </span>
+          <span class=”founder-name”>Alice Yihan Wang</span>
+          <span class=”founder-title”>Co-Founder, EFI</span>
         </div>
+
         <div class=”founder-block”>
+          <span class=”founder-mark”>&ldquo;</span>
           <p class=”founder-quote”>
-            “The questions of deepest consequence resist algorithmic resolution. How we form the moral
+            The questions of deepest consequence resist algorithmic resolution. How we form the moral
             imagination of the next generation, how we inhabit uncertainty with integrity, how we sustain
             our humanity against the gravity of unprecedented power — these are not challenges of
             engineering, but of civilization. EFI exists to tend that threshold: where the cultivation
-            of character becomes the precondition for a future worth inhabiting.”
+            of character becomes the precondition for a future worth inhabiting.
           </p>
-          <span class=”founder-caption”>
-            Amber Su · Co-Founder, EFI
-          </span>
+          <span class=”founder-name”>Amber Su</span>
+          <span class=”founder-title”>Co-Founder, EFI</span>
         </div>
+
       </div>
     </div>
   </section>
