@@ -154,7 +154,7 @@
       line-height: 1.04;
       letter-spacing: 0.005em;
       color: var(--ink);
-      margin-bottom: 2.2rem;
+      margin-bottom: 2.4rem;
     }
 
     .hero-title em {
@@ -162,20 +162,45 @@
       color: var(--amber);
     }
 
+    .hero-title .title-sub {
+      display: block;
+      font-size: 0.62em;
+      font-weight: 300;
+      font-style: normal;
+      color: var(--ink-soft);
+      letter-spacing: 0.06em;
+      margin-top: 0.15em;
+    }
+
     .hero-rule {
-      width: 48px;
+      width: 40px;
       height: 1px;
       background: linear-gradient(to right, transparent, var(--amber-light), transparent);
-      margin: 0 auto 2.2rem;
+      margin: 0 auto 2.4rem;
     }
 
     .hero-text {
-      max-width: 520px;
-      font-size: 1.05rem;
+      max-width: 480px;
+      font-size: 1.06rem;
       line-height: 1.95;
-      color: var(--ink-soft);
-      margin-bottom: 3.4rem;
+      color: var(--ink-mid);
+      margin-bottom: 1rem;
       font-weight: 300;
+    }
+
+    .hero-text strong {
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .hero-tagline {
+      max-width: 480px;
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--ink-soft);
+      font-weight: 300;
+      letter-spacing: 0.01em;
+      margin-bottom: 3.4rem;
     }
 
     .btn {
@@ -542,13 +567,15 @@
     <div class="container">
       <div class="hero-eyebrow">Enlighten Futures Initiative</div>
       <h1 class="hero-title">
-        Cultivating <em>Human Wisdom</em><br>
-        in the Age of AI
+        Cultivating <em>Human Wisdom</em>
+        <span class="title-sub">in the Age of AI</span>
       </h1>
       <div class="hero-rule"></div>
       <p class="hero-text">
-        In an age of increasingly intelligent machines,<br>
-        we are committed to nurturing increasingly wise humans.<br><br>
+        In an age of increasingly intelligent machines, we are committed
+        to nurturing <strong>increasingly wise humans.</strong>
+      </p>
+      <p class="hero-tagline">
         Bridging advanced AI with deep human understanding.
       </p>
       <a href="#mission" class="btn">Our Vision</a>
